@@ -19,7 +19,6 @@ print("Current config is:")
 print(config)
 
 
-
 # Defines Agent
 agent = REINFORCE(config)
 
