@@ -3,6 +3,7 @@ import gym
 from gym.wrappers import Monitor
 import numpy as np
 import matplotlib.pyplot as plt
+from utils import show_video
 from models.network import Model
 
 
@@ -77,4 +78,27 @@ class BaseAgent:
         plt.plot(rewards)
         plt.xlabel('Epoch')
         plt.ylabel('Reward')
+        plt.show()
+
+    def evaluate(self, render=False):
+        """Evaluate the agent on a single trajectory            
+        """
+        with torch.no_grad():
+            observation = self.monitor_env.reset()
+            observation = torch.tensor(observation, dtype=torch.float)
+            reward_episode = 0
+            done = False
+                
+            while not done:
+                action = self.model.select_action(observation)
+                observation, reward, done, info = self.monitor_env.step(int(action))
+                observation = torch.tensor(observation, dtype=torch.float)
+                reward_episode += reward
+            self.monitor_env.close()
+            if render:
+                show_video("./gym-results")
+                print(f'Reward: {reward_episode}')
+            print('---------------------------')
+            print('Agent Evaluation:')
+            print(f'Reward: {reward_episode}')
         
