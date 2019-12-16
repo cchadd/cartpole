@@ -1,5 +1,5 @@
 import gym
-from models.reinforce import REINFORCE
+from models.reinforce import Reinforce
 
 
 # Load environment and parameters
@@ -20,7 +20,7 @@ print(config)
 
 
 # Defines Agent
-agent = REINFORCE(config)
+agent = Reinforce(config)
 
 # Trains it !
 agent.train(n_trajectories=50, n_update=60)
