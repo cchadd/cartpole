@@ -1,9 +1,11 @@
 import torch
 import gym
+import pandas as pd
+import itertools
+import seaborn as sns
 from gym.wrappers import Monitor
 import numpy as np
 import matplotlib.pyplot as plt
-from utils import show_video
 from models.network import Model
 
 
@@ -58,6 +60,7 @@ class BaseAgent:
         """
         raise NotImplementedError
     
+
     def train(self, n_trajectories, n_update):
         """Training method
 
@@ -70,14 +73,15 @@ class BaseAgent:
             
         """
         rewards = []
+        rew_plot = []
+        
         for episode in range(n_update):
             rewards.append(self.optimize_model(n_trajectories))
             print(f'Episode {episode + 1}/{n_update}: rewards {np.round(np.mean(rewards[-1]), 2)} +/- {np.round(np.std(rewards[-1]), 2)}')
-        
+            rew_plot.append(rewards[-1])
         # Plotting
-        plt.plot(rewards)
-        plt.xlabel('Epoch')
-        plt.ylabel('Reward')
+        r = pd.DataFrame((itertools.chain(*(itertools.product([i], rewards[i]) for i in range(len(rewards))))), columns=['Epoch', 'Reward'])
+        sns.lineplot(x="Epoch", y="Reward", data=r, ci='sd')
         plt.show()
 
     def evaluate(self, render=False):
