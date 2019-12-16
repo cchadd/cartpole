@@ -99,9 +99,6 @@ class BaseAgent:
                 observation = torch.tensor(observation, dtype=torch.float)
                 reward_episode += reward
             self.monitor_env.close()
-            if render:
-                show_video("./gym-results")
-                print(f'Reward: {reward_episode}')
             print('---------------------------')
             print('Agent Evaluation:')
             print(f'Reward: {reward_episode}')
