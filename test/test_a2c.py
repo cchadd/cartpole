@@ -1,5 +1,6 @@
 from models.a2c import A2CAgent
-
+import warnings
+warnings.filterwarnings('ignore')
 
 # Defines environment and parameters
 env_id = 'CartPole-v1'
@@ -28,4 +29,4 @@ agent = A2CAgent(config_a2c)
 agent.training_batch(1000, 256)
 
 # Evaluate Agent !
-agent.evaluate()
+agent.evaluate(render=True)
