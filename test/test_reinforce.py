@@ -1,5 +1,4 @@
 import gym
-from gym.wrappers import Monitor
 from models.reinforce import REINFORCE
 
 
@@ -18,6 +17,7 @@ config = {
 
 print("Current config is:")
 print(config)
+
 
 
 # Defines Agent
