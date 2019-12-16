@@ -1,4 +1,5 @@
 # cartpole
 
 ## Models 
-- reinforce
+- Reinforce
+- Advantage Actor Critc a2c
