@@ -3,7 +3,7 @@ import torch
 from models.baseagent import BaseAgent
 
 
-class REINFORCE(BaseAgent):
+class Reinforce(BaseAgent):
     
     def _compute_returns(self, rewards):
         
