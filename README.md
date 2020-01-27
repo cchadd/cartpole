@@ -11,3 +11,11 @@
 ### Sample outcome curves
 - reinforce: reinforce.png
 - a2c: a2c.png
+
+### Videos
+
+- Reinforce result
+
+
+
+- A2c resusult
