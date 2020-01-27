@@ -20,11 +20,11 @@
 
 ### Videos
 
-- Reinforce result
+- Reinforce result (score: 500)
 
 ![alt text](https://github.com/cchadd/cartpole/blob/master/videos/Reinforce_result.gif)
 
 
-- A2c resusult
+- A2c result (score: 500)
 
 ![alt text](https://github.com/cchadd/cartpole/blob/master/videos/A2c_result.gif)
