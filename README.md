@@ -16,6 +16,8 @@
 
 - Reinforce result
 
+![alt text](https://github.com/cchadd/cartpole/blob/master/videos/Reinforce_result.gif)
 
 
 - A2c resusult
+![alt text](https://github.com/cchadd/cartpole/blob/master/videos/A2c_result.gif)
