@@ -10,11 +10,9 @@
 
 ### Sample outcome curves
 - reinforce:
-
 ![alt text](https://github.com/cchadd/cartpole/blob/master/reinforce.png)
 
 - a2c:
-
 ![alt text](https://github.com/cchadd/cartpole/blob/master/a2c.png)
 
 
