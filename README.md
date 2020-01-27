@@ -9,8 +9,14 @@
 - a2c: run `python -m test.test-a2c`
 
 ### Sample outcome curves
-- reinforce: reinforce.png
-- a2c: a2c.png
+- reinforce:
+
+![alt text](https://github.com/cchadd/cartpole/blob/master/reinforce.png)
+
+- a2c:
+
+![alt text](https://github.com/cchadd/cartpole/blob/master/a2c.png)
+
 
 ### Videos
 
@@ -20,4 +26,5 @@
 
 
 - A2c resusult
+
 ![alt text](https://github.com/cchadd/cartpole/blob/master/videos/A2c_result.gif)
